@@ -68,6 +68,7 @@ export class LoginUserPage implements OnInit {
 			async (error) => {
 				console.log(error)
 				await this.loading.dismiss()
+				this.toast('Usuário inválido')
 			}
 		)
 	}

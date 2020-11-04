@@ -15,6 +15,11 @@ Postman
 
 Estes documento README tem como objetivo fornecer as informações necessárias para realização do projeto Empresas.
 
+### COMO RODAR O PROJETO?
+
+-   npm i ( pasta do projeto)
+-   ionic serve
+
 ### O QUE FAZER ?
 
 -   Você deve fazer um fork deste repositório para o desenvolvimento do teste. Após o desenvolvimento você deve enviar por email um link do seu repositório. Nós iremos avaliar seu projeto e retornar o resultado do seu teste.
