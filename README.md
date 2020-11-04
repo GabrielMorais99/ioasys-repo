@@ -10,6 +10,8 @@ Postman
 
 <img src ='https://github.com/GabrielMorais99/ioasys-repo/blob/main/myApp/src/assets/img/login-sucess.PNG'width="128" align="left" >
 
+<img src="https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview01.png" width="128" align="left"><img src="https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview02.png" width="128" align="left"><img src="https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview03.png" width="128" align="left"><img src="https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview04.png" width="128" align="left"><img src="https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview05.png" width="128" align="left"><img src="https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview06.png" width="128" align="left">
+
 Estes documento README tem como objetivo fornecer as informações necessárias para realização do projeto Empresas.
 
 ### O QUE FAZER ?
