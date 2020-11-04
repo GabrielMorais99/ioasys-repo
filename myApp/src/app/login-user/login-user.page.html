@@ -1,62 +1,67 @@
-<ion-content padding>
+<ion-content padding class="animated fadeIn login auth-page">
 	<div class="theme-bg"></div>
 
-	<div class="auth-content"></div>
+	<div class="auth-content">
+		<div padding-horizontal text-center class="animated fadeInDown">
+			<div class="logo"></div>
+			<h4 no-margin>
+				<div class="BEM-VINDO-AO-EMPRESA">Bem-Vindo ao Empresas</div>
+				<div class="Lorem-ipsum-dolor-si">
+					<ion-text
+						>Lorem ipsum dolor sit amet, contetur adipiscing elit.
+						Nunc accumsan.</ion-text
+					>
+				</div>
+			</h4>
+		</div>
 
-	<div padding-horizontal text-center class="animated fadeInDown">
-		<div class="logo"></div>
-		<h4 no-margin>
-			<ion-text color="Black" class="fw700">
-				<!-- <strong>Macro</strong> Labor -->
-			</ion-text>
-		</h4>
-	</div>
+		<form [formGroup]="loginForm" class="list-form">
+			<ion-item no-padding class="animated fadeInUp">
+				<ion-label position="floating">
+					<ion-icon name="lock" item-start></ion-icon>
+					Email
+				</ion-label>
+				<ion-input
+					inputmode="numeric"
+					type="text"
+					formControlName="email"
+					clearInput
+					clearOnEdit="false"
+				></ion-input>
+			</ion-item>
 
-	<form [formGroup]="loginForm" class="list-form">
-		<ion-item no-padding class="animated fadeInUp">
-			<ion-label position="floating">
-				<ion-icon name="lock" item-start></ion-icon>
-				Email
-			</ion-label>
-			<ion-input
-				inputmode="numeric"
-				type="text"
-				formControlName="Email"
-				clearInput
-				clearOnEdit="false"
-			></ion-input>
-		</ion-item>
+			<ion-item no-padding class="animated fadeInUp">
+				<ion-label position="floating">
+					<ion-icon name="lock" item-start></ion-icon>
+					Senha
+				</ion-label>
+				<ion-input
+					type="text"
+					inputmode="numeric"
+					formControlName="password"
+					clearInput
+					clearOnEdit="false"
+				></ion-input>
+			</ion-item>
+		</form>
 
-		<ion-item no-padding class="animated fadeInUp">
-			<ion-label position="floating">
-				<ion-icon name="lock" item-start></ion-icon>
-				Senha
-			</ion-label>
-			<ion-input
-				type="text"
-				inputmode="numeric"
-				formControlName="Senha"
-				clearInput
-				clearOnEdit="false"
-			></ion-input>
-		</ion-item>
-	</form>
-	<div>
-		<ion-button
-			icon-left
-			size="medium"
-			expand="full"
-			(click)="login()"
-			[disabled]="!loginForm.valid"
-			tappable
-		>
-			<ion-icon name="log-in"></ion-icon>
-			Entrar
-		</ion-button>
-		<ion-grid class="btn-group">
-			<ion-row>
-				<ion-col size="4"> </ion-col>
-			</ion-row>
-		</ion-grid>
+		<div>
+			<ion-button
+				class="Rectangle-26"
+				icon-left
+				expand="full"
+				(click)="login()"
+				[disabled]="!loginForm.valid"
+				tappable
+			>
+				<ion-icon name="log-in"></ion-icon>
+				Entrar
+			</ion-button>
+			<ion-grid class="btn-group">
+				<ion-row>
+					<ion-col size="4"> </ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
 	</div>
 </ion-content>
