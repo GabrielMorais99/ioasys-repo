@@ -12,11 +12,12 @@
 
 ion-icon {
 	width: 3.75rem;
-
 	height: 3.75rem;
-
 	object-fit: contain;
 }
 .toolbar-class {
 	--background: #ee4c77;
+}
+ion-content {
+	--background: #ebe9d7;
 }
