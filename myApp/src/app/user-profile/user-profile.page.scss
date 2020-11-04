@@ -2,9 +2,21 @@
 	// width: 160px;
 	// height: 160px;
 	width: 190px;
-	height: 100px;
+	height: 50px;
 	margin: 20px auto 8px;
 	border-radius: 10%;
-	background: url('/assets/img/img-login.png') no-repeat;
+	background: url('/assets/img/img-user-profile.png') no-repeat;
 	background-size: 100%;
+	background-color: linear-gradient(173deg, var(white) 24%, var(white) 66%);
+}
+
+ion-icon {
+	width: 3.75rem;
+
+	height: 3.75rem;
+
+	object-fit: contain;
+}
+.toolbar-class {
+	--background: #ee4c77;
 }
