@@ -10,6 +10,9 @@ Postman
 
 <img src ='https://github.com/GabrielMorais99/ioasys-repo/blob/main/myApp/src/assets/img/login-sucess.PNG' width="128" align="left" >
 
+<img src ='https://github.com/GabrielMorais99/ioasys-repo/blob/main/myApp/src/assets/img/app-body.PNG' width="128" align="left" >
+<br><br><br><br><br><br><br>
+
 Estes documento README tem como objetivo fornecer as informações necessárias para realização do projeto Empresas.
 
 ### O QUE FAZER ?
