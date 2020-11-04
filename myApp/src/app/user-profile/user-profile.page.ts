@@ -6,15 +6,12 @@ import { Component, OnInit } from '@angular/core'
 	styleUrls: ['./user-profile.page.scss'],
 })
 export class UserProfilePage implements OnInit {
-	input = document.getElementById('search')
-
 	constructor() {}
 
 	ngOnInit() {}
-	ionviewWillEnter() {
-		console.log(this.input)
-	}
+	ionviewWillEnter() {}
 	async busca() {
-		console.log('busca')
+		let input = document.getElementById('search').innerText
+		console.log(input)
 	}
 }

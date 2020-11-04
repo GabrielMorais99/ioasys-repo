@@ -8,7 +8,7 @@
 					placeholder=""
 					id="search"
 				/>
-				<ion-icon name="search"> </ion-icon>
+				<ion-icon (click)="busca()" name="search"> </ion-icon>
 			</div>
 		</div>
 	</ion-toolbar>
@@ -16,8 +16,6 @@
 
 <ion-content>
 	<div class="Clique-na-busca-para">
-		<ion-text (click)="busca()">
-			Clique aqui na busca para iniciar</ion-text
-		>
+		<ion-text> Clique aqui na busca para iniciar</ion-text>
 	</div>
 </ion-content>
