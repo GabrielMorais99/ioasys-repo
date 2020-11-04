@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
-import { ToastController } from '@ionic/angular'
+import { LoadingController, ToastController } from '@ionic/angular'
 import { LoginUserService } from '../api/login-user.service'
-
+import { Storage } from '@ionic/storage'
+import { Router } from '@angular/router'
 @Component({
 	selector: 'app-login-user',
 	templateUrl: './login-user.page.html',
@@ -10,6 +11,7 @@ import { LoginUserService } from '../api/login-user.service'
 })
 export class LoginUserPage implements OnInit {
 	public loginForm: FormGroup
+	loading: any
 	messageCPF = ''
 	messageDATAnasc = ''
 	errorEmail = false
@@ -22,7 +24,10 @@ export class LoginUserPage implements OnInit {
 	constructor(
 		private formBuilder: FormBuilder,
 		private loginuserService: LoginUserService,
-		private toastCtrl: ToastController
+		private toastCtrl: ToastController,
+		private loadingCtrl: LoadingController,
+		private localstorage: Storage,
+		private router: Router
 	) {}
 
 	ngOnInit() {
@@ -40,13 +45,34 @@ export class LoginUserPage implements OnInit {
 		})
 		toast.present()
 	}
+
+	async presentLoading() {
+		this.loading = await this.loadingCtrl.create({
+			translucent: true,
+			spinner: 'dots',
+			cssClass: 'loading-custom-class',
+			message: 'Aguarde...',
+		})
+		await this.loading.present()
+	}
+
 	async login() {
+		this.presentLoading()
 		this.loginuserService.login(this.loginForm.value).subscribe(
-			(data) => console.log(data),
-			(error) => console.log(error)
+			async (data) => {
+				console.log(data)
+				await this.localstorage.set('resp-login', data)
+				this.router.navigate['user-profile']
+				await this.loading.dismiss()
+			},
+			async (error) => {
+				console.log(error)
+				await this.loading.dismiss()
+			}
 		)
 	}
 	async login_test() {
+		this.presentLoading()
 		this.loginuserService.login(this.test_login).subscribe(
 			(data) => console.log(data),
 			(error) => console.log(error)
