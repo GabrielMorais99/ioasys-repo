@@ -1,0 +1,46 @@
+<ion-content padding>
+	<div class="theme-bg"></div>
+
+	<div class="auth-content"></div>
+
+	<div padding-horizontal text-center class="animated fadeInDown">
+		<div class="logo"></div>
+		<h4 no-margin>
+			<ion-text color="Black" class="fw700">
+				<!-- <strong>Macro</strong> Labor -->
+			</ion-text>
+		</h4>
+	</div>
+
+	<form [formGroup]="onRegisterForm" class="list-form">
+		<ion-item no-padding class="animated fadeInUp">
+			<ion-label position="floating">
+				<ion-icon name="lock" item-start></ion-icon>
+				CPF
+			</ion-label>
+			<ion-input
+				inputmode="numeric"
+				type="text"
+				[brmasker]="{person: true, type:'num', len:14}"
+				formControlName="CPF"
+				clearInput
+				clearOnEdit="false"
+			></ion-input>
+		</ion-item>
+
+		<ion-item no-padding class="animated fadeInUp">
+			<ion-label position="floating">
+				<ion-icon name="lock" item-start></ion-icon>
+				Data de Nascimento
+			</ion-label>
+			<ion-input
+				type="text"
+				inputmode="numeric"
+				[brmasker]="{mask:'00/00/0000', type:'num', len:10}"
+				formControlName="dataNasc"
+				clearInput
+				clearOnEdit="false"
+			></ion-input>
+		</ion-item>
+	</form>
+</ion-content>
