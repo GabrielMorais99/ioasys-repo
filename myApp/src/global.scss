@@ -10,17 +10,62 @@
  */
 
 /* Core CSS required for Ionic components to work properly */
-@import "~@ionic/angular/css/core.css";
+@import '~@ionic/angular/css/core.css';
 
 /* Basic CSS for apps built with Ionic */
-@import "~@ionic/angular/css/normalize.css";
-@import "~@ionic/angular/css/structure.css";
-@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
 @import '~@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
-@import "~@ionic/angular/css/padding.css";
-@import "~@ionic/angular/css/float-elements.css";
-@import "~@ionic/angular/css/text-alignment.css";
-@import "~@ionic/angular/css/text-transformation.css";
-@import "~@ionic/angular/css/flex-utils.css";
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap" rel="stylesheet"');
+
+.auth-content {
+	margin: 0 5%;
+
+	.logo {
+		// width: 160px;
+		// height: 160px;
+		width: 190px;
+		height: 190px;
+		margin: 20px auto 8px;
+		border-radius: 10%;
+		background: url('../../assets/img/macro-png.png') no-repeat;
+		background-size: 100%;
+	}
+
+	.list-form {
+		padding: 0;
+		margin-bottom: 0;
+
+		ion-item {
+			background: none;
+			padding: 0;
+
+			&:first-child {
+				border-top: none;
+			}
+
+			&:after {
+				display: none;
+			}
+
+			ion-label {
+				font-size: 1em;
+				// color: var(--ion-color-light);
+				color: Black;
+			}
+
+			input {
+				// color: var(--ion-color-light);
+				color: Black;
+			}
+		}
+	}
+}

@@ -12,17 +12,16 @@
 		</h4>
 	</div>
 
-	<form [formGroup]="onRegisterForm" class="list-form">
+	<form [formGroup]="loginForm" class="list-form">
 		<ion-item no-padding class="animated fadeInUp">
 			<ion-label position="floating">
 				<ion-icon name="lock" item-start></ion-icon>
-				CPF
+				Email
 			</ion-label>
 			<ion-input
 				inputmode="numeric"
 				type="text"
-				[brmasker]="{person: true, type:'num', len:14}"
-				formControlName="CPF"
+				formControlName="Email"
 				clearInput
 				clearOnEdit="false"
 			></ion-input>
@@ -31,16 +30,33 @@
 		<ion-item no-padding class="animated fadeInUp">
 			<ion-label position="floating">
 				<ion-icon name="lock" item-start></ion-icon>
-				Data de Nascimento
+				Senha
 			</ion-label>
 			<ion-input
 				type="text"
 				inputmode="numeric"
-				[brmasker]="{mask:'00/00/0000', type:'num', len:10}"
-				formControlName="dataNasc"
+				formControlName="Senha"
 				clearInput
 				clearOnEdit="false"
 			></ion-input>
 		</ion-item>
 	</form>
+	<div>
+		<ion-button
+			icon-left
+			size="medium"
+			expand="full"
+			(click)="login()"
+			[disabled]="!loginForm.valid"
+			tappable
+		>
+			<ion-icon name="log-in"></ion-icon>
+			Entrar
+		</ion-button>
+		<ion-grid class="btn-group">
+			<ion-row>
+				<ion-col size="4"> </ion-col>
+			</ion-row>
+		</ion-grid>
+	</div>
 </ion-content>
