@@ -41,13 +41,15 @@ export class LoginUserPage implements OnInit {
 		toast.present()
 	}
 	async login() {
-		this.loginuserService
-			.login(this.loginForm.value)
-			.subscribe((data) => console.log(data))
+		this.loginuserService.login(this.loginForm.value).subscribe(
+			(data) => console.log(data),
+			(error) => console.log(error)
+		)
 	}
 	async login_test() {
-		this.loginuserService
-			.login(this.test_login)
-			.subscribe((data) => console.log(data))
+		this.loginuserService.login(this.test_login).subscribe(
+			(data) => console.log(data),
+			(error) => console.log(error)
+		)
 	}
 }
