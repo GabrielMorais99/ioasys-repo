@@ -62,7 +62,7 @@ export class LoginUserPage implements OnInit {
 			async (data) => {
 				console.log(data)
 				await this.localstorage.set('resp-login', data)
-				this.router.navigate['user-profile']
+				this.router.navigate(['/user-profile'])
 				await this.loading.dismiss()
 			},
 			async (error) => {
