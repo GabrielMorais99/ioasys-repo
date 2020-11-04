@@ -14,10 +14,17 @@ ion-icon {
 	width: 3.75rem;
 	height: 3.75rem;
 	object-fit: contain;
+	color: white;
 }
 .toolbar-class {
 	--background: #ee4c77;
 }
 ion-content {
 	--background: #ebe9d7;
+}
+.icon-class {
+	left: auto;
+	display: flex;
+	position: absolute;
+	margin-left: 400px;
 }
