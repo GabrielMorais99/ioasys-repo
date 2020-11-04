@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core'
 	styleUrls: ['./user-profile.page.scss'],
 })
 export class UserProfilePage implements OnInit {
-	input = document.getElementById('search').toString()
+	input = document.getElementById('search')
 
 	constructor() {}
 
