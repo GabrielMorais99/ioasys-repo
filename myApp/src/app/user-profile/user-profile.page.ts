@@ -8,11 +8,14 @@ import { Storage } from '@ionic/storage'
 })
 export class UserProfilePage implements OnInit {
 	cardComponent: boolean = false
+	buscaComponent: boolean = false
 	constructor(private localstorage: Storage) {}
 
 	ngOnInit() {}
 	ionviewWillEnter() {}
 	async busca() {
+		this.buscaComponent = true
+
 		let input = document.getElementById('search').innerText
 		console.log(input)
 		if (input !== '') {

@@ -1,31 +1,55 @@
 <ion-header>
-	<ion-toolbar class="toolbar-class" placeholder="Search..">
-		<div class="logo-profile">
-			<div class="icon-class">
-				<input
-					class="Button-Edges"
-					type="text"
-					placeholder=""
-					id="search"
-				/>
-				<ion-icon (click)="busca()" name="search"> </ion-icon>
+	<ng-template *ngIf="buscaComponent===false">
+		<ion-toolbar class="toolbar-class">
+			<div class="logo-profile">
+				<div class="icon-class">
+					<ion-icon (click)="busca()" name="search"> </ion-icon>
+				</div>
 			</div>
-		</div>
-	</ion-toolbar>
+		</ion-toolbar>
+	</ng-template>
+
+	<!-- <ng-template *ngIf="buscaComponent===true"> -->
+		<ion-toolbar class="toolbar-class">
+			<div class="logo-profile">
+				<div class="icon-class">
+					<input
+						class="Button-Edges"
+						type="text"
+						placeholder=""
+						id="search"
+					/>
+					<ion-icon name="search"> </ion-icon>
+				</div>
+			</div>
+		</ion-toolbar>
+	<!-- </ng-template> -->
 </ion-header>
 
 <ion-content>
-	<div ng-if="!cardComment" class="Clique-na-busca-para">
+  <!-- <ng-template *ngIf="buscaComponent===false"> -->
+	<div class="Clique-na-busca-para">
 		<ion-text> Clique aqui na busca para iniciar</ion-text>
-	</div>
-
-	<div ng-if="cardComment" class="Clique-na-busca-para">
+  <!-- </ng-template> -->
+  <!-- <ng-component *ngIf="cardComment===true"> -->
+	<div class="Clique-na-busca-para">
 		<ion-card class="base">
+			<div>
+				<img
+					src=""
+					srcset="
+						img/img-e-1-lista@2x.png 2x,
+						img/img-e-1-lista@3x.png 3x
+					"
+					class="img_e1_lista"
+				/>
+			</div>
 			<div>
 				<h2 class="Empresa1"></h2>
 				<h1 class="Negcio"></h1>
 				<p class="Brasil"></p>
 			</div>
 		</ion-card>
-	</div>
+  </div>
+<!-- </ng-component> -->
 </ion-content>
