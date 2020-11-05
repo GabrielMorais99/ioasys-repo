@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { Storage } from '@ionic/storage'
 
 @Component({
 	selector: 'app-user-profile',
@@ -6,12 +7,22 @@ import { Component, OnInit } from '@angular/core'
 	styleUrls: ['./user-profile.page.scss'],
 })
 export class UserProfilePage implements OnInit {
-	constructor() {}
+	cardComponent: boolean = false
+	constructor(private localstorage: Storage) {}
 
 	ngOnInit() {}
 	ionviewWillEnter() {}
 	async busca() {
 		let input = document.getElementById('search').innerText
 		console.log(input)
+		if (input !== '') {
+			let resp = await this.localstorage.get('resp-login')
+			console.log(resp)
+			if (input === resp) {
+				var card = document.createElement('#card')
+				console.log(card)
+				this.cardComponent = true
+			}
+		}
 	}
 }

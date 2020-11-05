@@ -15,7 +15,11 @@
 </ion-header>
 
 <ion-content>
-	<div class="Clique-na-busca-para">
+	<div ng-if="!cardComment" class="Clique-na-busca-para">
 		<ion-text> Clique aqui na busca para iniciar</ion-text>
+	</div>
+
+	<div ng-if="cardComment" class="Clique-na-busca-para">
+		<ion-card> </ion-card>
 	</div>
 </ion-content>
